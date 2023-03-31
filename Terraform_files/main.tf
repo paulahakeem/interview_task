@@ -63,7 +63,7 @@ module "cluster" {
 }
 
 module "EC2" {
-  source                      = "./2-VMS"
+  source                      = "./2-VMs"
   ec2_name                    = "jump_Ec2"
   ec2_ami                     = "ami-0557a15b87f6559cf"
   ec2_type                    = "t2.micro"
