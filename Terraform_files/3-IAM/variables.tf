@@ -1,3 +1,3 @@
 variable "role_name" {}
-variable service_name {}
-variable policies_arns {}
+variable "service_name" {}
+variable "policies_arns" {}

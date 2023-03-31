@@ -26,7 +26,7 @@ resource "aws_eks_node_group" "nodes" {
     min_size     = var.min_size
   }
 remote_access {
-    ec2_ssh_key = "paula"
+    ec2_ssh_key = var.ssh_key
   }
   update_config {
     max_unavailable = var.max_unavailable

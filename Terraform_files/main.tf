@@ -60,6 +60,7 @@ module "cluster" {
   min_size                = 1
   max_unavailable         = 1
   nodes_roles_attachments = module.IAM_NODES
+  ssh_key = "paula_key_ubuntu"
 }
 
 module "EC2" {
@@ -70,6 +71,6 @@ module "EC2" {
   SG_id                       = [module.network.secgroup-id]
   ec2_subnet_ID               = module.network.public_subnet_id1
   associate_public_ip_address = true
-  key_pair                    = "paula"
+  key_pair                    = "paula_key_ubuntu"
   # vm_role = module.IAM_NODES.role_name
 }
