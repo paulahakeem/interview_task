@@ -18,7 +18,7 @@ spec:
       serviceAccountName: jenkins-admin
       containers:
         - name: jenkins
-          image: paulahakeem/finalprojectimage:v3.0
+          image: paulahakeem/finalprojectimage:v4.0
           ports:
             - name: httpport
               containerPort: 8080
