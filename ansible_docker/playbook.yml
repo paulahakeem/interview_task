@@ -1,0 +1,20 @@
+- name: Ansible Playbook to Install docker
+  hosts: private_instance
+  become: true
+  tasks:
+    - name: Update all packages
+      yum:
+        name: '*'
+        state: latest
+        update_only: yes
+      
+    - name: Install docker-ce (centos) 
+      yum:
+       name: docker
+       state: latest
+
+    - name: Enable Docker CE service at startup
+      service:
+        name: docker
+        state: started
+        enabled: yes
