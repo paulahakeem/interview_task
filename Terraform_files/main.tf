@@ -56,7 +56,7 @@ module "cluster" {
   node_role_arn           = module.IAM_NODES.role_arn
   subnets_nodes           = [module.network.private_subnet_id1, module.network.private_subnet_id2]
   desired_size            = 1
-  max_size                = 3
+  max_size                = 4
   min_size                = 1
   max_unavailable         = 1
   nodes_roles_attachments = module.IAM_NODES
@@ -67,7 +67,7 @@ module "EC2" {
   source                      = "./2-VMs"
   ec2_name                    = "jump_Ec2"
   ec2_ami                     = "ami-0557a15b87f6559cf"
-  ec2_type                    = "t2.micro"
+  ec2_type                    = "t2.medium"
   SG_id                       = [module.network.secgroup-id]
   ec2_subnet_ID               = module.network.public_subnet_id1
   associate_public_ip_address = true
