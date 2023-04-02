@@ -1,6 +1,6 @@
 - name: Configure Bastion Host And Deploy Jenkins Master
   hosts: all
-  gather_facts: false
+  gather_facts: true
   become: yes
   vars:
     yaml_files:

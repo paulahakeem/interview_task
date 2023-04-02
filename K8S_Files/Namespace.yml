@@ -8,8 +8,4 @@ kind: Namespace
 metadata:
   name: backend-ns
 ---
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: webportal
 
